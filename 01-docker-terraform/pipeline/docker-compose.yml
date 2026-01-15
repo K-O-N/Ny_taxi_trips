@@ -3,6 +3,7 @@ version: "3.9"
 services:
   pgdatabase:
     image: postgres:18
+    container_name: pgdatabase
     environment:
       POSTGRES_USER: "root"
       POSTGRES_PASSWORD: "root"

@@ -8,5 +8,7 @@ COPY pyproject.toml .python-version uv.lock ./
 RUN uv sync --locked
 
 COPY ingest_data.py .
+COPY new_ingest.py .
+COPY run_all.py .
 
-ENTRYPOINT ["python", "ingest_data.py" ]
+ENTRYPOINT ["python", "run_all.py" ]
