@@ -1,4 +1,4 @@
-id: gcp_kv
+id: gcp_setup
 namespace: zoomcamp
 
 tasks:

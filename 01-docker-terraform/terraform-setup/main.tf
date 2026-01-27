@@ -8,8 +8,8 @@ terraform {
 }
 
 provider "google" {
-  project = "dtc-trips"
-  region  = "EU"
+  project     = "dtc-trips"
+  region      = "EU"
   credentials = file("C:/Users/PC/Documents/Project/dtc/Ny_taxi_trips/01-docker-terraform/terraform-setup/keys/google_credentials.json")
 }
 
@@ -17,7 +17,6 @@ resource "google_storage_bucket" "auto-expire" {
   name          = "ny-trips-dtc-bucket"
   location      = "EU"
   force_destroy = true
-
 
   lifecycle_rule {
     condition {
@@ -27,4 +26,10 @@ resource "google_storage_bucket" "auto-expire" {
       type = "AbortIncompleteMultipartUpload"
     }
   }
+}
+
+
+resource "google_bigquery_dataset" "ny_taxi_dataset" {
+  dataset_id = "ny_taxi_dataset"
+  location   = "EU"
 }
