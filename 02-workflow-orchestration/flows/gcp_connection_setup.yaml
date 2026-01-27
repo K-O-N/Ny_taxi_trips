@@ -1,0 +1,22 @@
+id: gcp_connection_test
+namespace: zoomcamp
+
+tasks:
+  - id: list_buckets
+    type: io.kestra.plugin.gcp.gcs.List
+    # This line is the "bridge" between your Env Var and the Task
+    serviceAccount: "{{ secret('GCP_CREDS') }}" 
+    projectId: "dtc-trips"
+    from: "gs://ny-trips-dtc-bucket/"
+
+  - id: log_results
+    type: io.kestra.plugin.core.log.Log
+    message: "Successfully connected! Found {{ outputs.list_buckets.blobs | length }} objects/buckets."
+
+
+  # first, make a directory having the google credentials
+  # run this to encode your files:  base64 -w 0 google_credentials.json
+  # crearte a .env file in the same folder as your docker-compose.yml with the following
+  # SECRET_GCP_CREDS=your_base64_encoded_string_here
+  # Then, in your docker-compose.yml, add the following line to the kestra environment variables:
+  # SECRET_GCP_CREDS: ${SECRET_GCP_CREDS}
