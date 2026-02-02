@@ -40,12 +40,12 @@ docker compose down
 SECRET_GCP_CREDS: ${SECRET_GCP_CREDS}
 ```
 - to set up Kestra for GCP, we need to set up the Google Cloud Platform. Adjust the following flow https://github.com/K-O-N/Ny_taxi_trips/blob/main/02-workflow-orchestration/flows/gcp_setup_one.yaml  to include your service account, GCP project ID, BigQuery dataset and GCS bucket name (along with their location) as KV Store values:
-- 
-GCP_PROJECT_ID
-GCP_LOCATION
-GCP_BUCKET_NAME
-GCP_DATASET
+* GCP_PROJECT_ID
+* GCP_LOCATION
+* GCP_BUCKET_NAME
+* GCP_DATASET
 
 ## Data Pipeline 
 Using Kestra schedule and Backfill, I built data pipelines to extract, transform and load data into postgres and Google BigQuery. 
 Find flows in the flows folder
+
