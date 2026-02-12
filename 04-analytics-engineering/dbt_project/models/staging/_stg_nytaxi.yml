@@ -1,0 +1,96 @@
+version: 2
+
+models:
+  - name: stg_nytaxi__yellow_trips
+    description: "Staging models for the yellow taxi trips data from NYC Taxi and Limousine Commission (TLC)"
+    columns:
+      - name: vendorid
+        description: ""
+
+      - name: ratecodeid
+        description: ""
+
+      - name: pickup_locationid
+        description: ""
+
+      - name: dropoff_locationid
+        description: ""
+
+      - name: pickup_datetime
+        description: ""
+
+      - name: dropoff_datetime
+        description: ""
+
+      - name: store_and_fwd_flag
+        description: ""
+
+      - name: passenger_count
+        description: ""
+
+      - name: trip_distance
+        description: ""
+
+      - name: fare_amount
+        description: ""
+
+      - name: tip_amount
+        description: ""
+
+      - name: tolls_amount
+        description: ""
+
+      - name: total_amount
+        description: ""
+
+      - name: improvement_surcharge
+        description: ""
+
+      - name: congestion_surcharge
+        description: ""
+
+      - name: payment_type
+        data_type: int64
+        description: " payment types used by user"
+    
+      - name: payment_type_desc
+        description: "Accepted payments types in string format"
+
+
+  - name: stg_nytaxi__green_trips
+    description: "Staging models for the green taxi trips data from NYC Taxi and Limousine Commission (TLC)"
+    columns:
+      - name: vendorid
+        description: ""
+
+      - name: ratecodeid
+        description: ""
+
+      - name: pickup_locationid
+        description: ""
+
+      - name: dropoff_locationid
+        description: ""
+
+      - name: pickup_datetime
+        description: ""
+
+      - name: dropoff_datetime
+        description: ""
+
+      - name: store_and_fwd_flag
+        description: ""
+
+      - name: passenger_count
+        description: ""
+
+      - name: trip_distance
+        description: ""
+
+      - name: payment_type
+        description: " payment types used by user"
+
+      - name: payment_type_desc
+        description: "Accepted payments types in string format"
+        
+         

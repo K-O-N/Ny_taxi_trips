@@ -1,0 +1,18 @@
+version: '3'
+services:
+  dbt:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dbt-bigquery
+    image: dbt/bigquery
+    # Change this to match the folder inside your container where your dbt_project.yml actually lives (project name you intend to use)
+    working_dir: /usr/app/dbt_project
+    volumes:
+      - .:/usr/app
+      - ./credentials/google_credentials.json:/credentials/google_credentials.json
+
+    environment:
+      GOOGLE_APPLICATION_CREDENTIALS: /credentials/google_credentials.json
+    network_mode: host
+  
