@@ -1,0 +1,12 @@
+version 2:
+
+models:
+  - name: nytaxi_monthly_revenue
+    description: "Monthly revenue report for NYC taxi trips"
+   
+  - name: nytaxi_daily_users
+    description: "Daily unique users report for NYC taxi trips"
+
+  - name: nytaxi_monthly_zones_revenue
+    description: "Monthly revenue report by pickup zones for NYC taxi trips"  
+  

@@ -1,0 +1,9 @@
+sources:
+  - name: nytaxi_trips
+    description: bigquery dataset for nytaxi trips
+    database: dtc-trips
+    schema: staging
+    tables:
+      - name: ext_yellow_trips
+      - name: ext_green_trips
+      

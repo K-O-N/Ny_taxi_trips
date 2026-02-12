@@ -1,0 +1,11 @@
+version: 2
+
+seeds:
+  - name: taxi_zones
+    description: "Taxi zones data from NYC Taxi and Limousine Commission (TLC)"
+    columns:
+      - name: LocationID
+        description: "Primary key for each zones"
+        tests:
+          - unique
+          - not_null
