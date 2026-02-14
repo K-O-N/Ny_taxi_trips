@@ -3,14 +3,14 @@ with green_trips as (
     select *, 
            'green' as cab_color
     from {{ ref('stg_nytaxi__green_trips') }}  
-    qualify row_number() over (partition by tripid order by total_amount desc, payment_type desc ) = 1    -- fix duplicates prioritise records with positive amount
+       -- fix duplicates prioritise records with positive amount
 ),
 yellow_trips as (
 
     select *, 
            'yellow' as cab_color
     from {{ ref('stg_nytaxi__yellow_trips') }}
-    qualify row_number() over (partition by tripid order by total_amount desc, payment_type desc ) = 1
+    
 ),
 final as (
 
@@ -62,5 +62,3 @@ left join {{ ref('int_trip_locations')}} as dl2
 on f.dropoff_locationid = dl2.locationid
 -- noticed some duplicates - repeated trips data in yellow and green trips 
 qualify row_number() over (partition by tripid order by total_amount desc, payment_type desc ) = 1
-
-

@@ -6,4 +6,5 @@ sources:
     tables:
       - name: ext_yellow_trips
       - name: ext_green_trips
+      - name: ext_fhv_trips
       
