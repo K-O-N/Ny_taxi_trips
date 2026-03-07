@@ -11,7 +11,7 @@ Data can be processed in different ways:
 - - 3 times per hour, etc
  
   Technologies used for batch streaming include python, SQL, Spark, Flink
-  ### Adavntages of Batch Jobs
+  ### Advantages of Batch Jobs
   - Easy to manage
   - Retry is safe as it is not happening in real-time
   - Easy to scale
@@ -20,3 +20,4 @@ Data can be processed in different ways:
 
   # Spark for Batch Streaming
   Spark is a distributed data processing engine. For this project, I will be using Databricks platform.
+
