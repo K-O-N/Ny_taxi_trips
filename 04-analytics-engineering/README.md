@@ -16,7 +16,6 @@ This week introduced:
 
 The end result is a **reproducible analytics pipeline** where transformations are version-controlled, testable, and well-documented.
 
----
 
 ## Architecture Context
 
@@ -29,7 +28,6 @@ At this stage, the pipeline looks like this:
 5. dbt tests validate data quality
 6. dbt docs generate project documentation and lineage
 
----
 
 ## Tooling Used
 
@@ -38,7 +36,6 @@ At this stage, the pipeline looks like this:
 * **Docker** (optional, depending on setup)
 * **GitHub** (version control)
 
----
 
 ## Step 1: Setting Up dbt with docker
 
@@ -51,7 +48,6 @@ dbt Core was installed using Docker with the BigQuery adapter:
 
 > dbt Core is chosen instead of dbt Cloud to ensure full control over execution and environment.
 
----
 
 ### 1.2 Initializing the dbt Project
 
